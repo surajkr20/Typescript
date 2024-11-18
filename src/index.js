@@ -16,13 +16,8 @@ var func1 = function (n, m) {
 var func2 = function (n, m) {
     return (n * m);
 };
-// using type alias
-var player1 = {
-    firstName: 'Abhinav',
-    middleName: 'Suraj',
-    lastName: 'bhardwaj',
-    age: 20,
-    isPresent: false,
-    _id: 294
-};
-console.log(player1);
+// custom type data using in fun as a argument
+function login(playerData) {
+    return playerData;
+}
+console.log(login({ firstName: "Abhnav", lastName: "bhardwaaj", age: 20, isPresent: true, _id: 90 }));

@@ -29,22 +29,16 @@ type myname = string | boolean;
 
 type MyName = {
     firstName: string,
-    middleName: string,
+    middleName?: string,    // middleName is optional, which contain only Number or undefined(?)
     lastName: string,
     age: Number,
     isPresent: boolean,
-    _id: Number
+    _id: Number            
 }
 
-// using type alias
-const player1: MyName = {
-    firstName: 'Abhinav',
-    middleName: 'Suraj',
-    lastName: 'bhardwaj',
-    age: 20,
-    isPresent: false,
-    _id: 294
+// custom type data using in fun as a argument
+function login(playerData: MyName): MyName{
+    return playerData
 }
 
-console.log(player1)
-
+console.log(login({firstName: "Abhnav",lastName: "bhardwaaj",age: 20, isPresent: true, _id: 90}))
